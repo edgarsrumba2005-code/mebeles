@@ -685,7 +685,7 @@ footer p {
     nav {
     position: fixed;
 
-    top: 0;
+    top: 5px;
     left: 0;
 
     width: 100%;
