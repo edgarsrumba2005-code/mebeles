@@ -1,0 +1,1053 @@
+/* Noņem noklusējuma atstarpes */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: #252525;
+    --wood: #8b5e3c;
+    --light: #e3e1df85;
+    --text: #555555;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Galvenais dizains */
+
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+
+/* Navigācija */
+
+nav {
+    height: 150px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 8%;
+
+    background-color: white;
+}
+
+.logo {
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.menu-button,
+.close-button {
+    display: none;
+}
+
+.menu {
+    display: flex;
+
+    gap: 35px;
+}
+
+.menu a {
+    text-decoration: none;
+
+    color: black;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    opacity: 0.5;
+}
+
+
+/* Galvenā sadaļa */
+
+.hero {
+    position: relative;
+
+    height: 700px;
+
+    background-image: url("https://images.unsplash.com/photo-1556911220-bff31c812dba");
+
+    background-size: cover;
+
+    background-position: left;
+
+    background-attachment: fixed;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 10%;
+}
+
+
+/* Teksts */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    width: 600px;
+
+    color: white;
+
+    animation: fadeIn 1s ease;
+}
+
+
+.hero h1 {
+
+    font-size: 64px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    letter-spacing: -1px;
+}
+
+
+.hero p {
+
+    font-size: 19px;
+
+    margin-bottom: 35px;
+
+    line-height: 1.6;
+
+    max-width: 500px;
+}
+
+
+/* Poga */
+
+.button {
+
+    display: inline-block;
+
+    background-color: var(--wood);
+
+    color: white;
+
+    padding: 16px 30px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--dark);
+
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.25)
+    );
+}
+
+/* PAKALPOJUMU SADAĻA */
+
+.services {
+    padding: 100px 10%;
+}
+
+
+.services h2 {
+    font-size: 42px;
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+/* Konteiners, kurā ir visas kartītes */
+
+.services-container {
+    display: flex;
+
+    gap: 20px;
+
+}
+
+.services-container .service:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.services-container .service:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.services-container .service:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+/* Katra pakalpojuma kartīte */
+
+.service {
+    flex: 1;
+
+    padding: 40px;
+
+    background-color: var(--light);
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.service h3 {
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+.service p {
+    line-height: 1.6;
+
+    color: #555;
+}
+
+/* PAR MUMS SADAĻA */
+
+.about {
+    padding: 100px 10%;
+}
+
+
+.about-container {
+    display: flex;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.about-image {
+    flex: 1;
+}
+
+
+.about-image img {
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+
+.about-content {
+    flex: 1;
+}
+
+
+.about-content h2 {
+    font-size: 42px;
+
+    margin-bottom: 25px;
+}
+
+
+.about-content p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+
+    color: var(--dark);
+}
+
+.about-button {
+    display: inline-block;
+
+    background-color: var(--wood);
+
+    color: white;
+
+    padding: 16px 30px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.about-button:hover {
+    background-color: var(--dark);
+}
+
+/* GALERIJA */
+
+.gallery {
+    padding: 100px 10%;
+}
+
+
+.gallery h2 {
+    font-size: 42px;
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+.gallery-container {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.gallery-item {
+    flex: 1;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.gallery-item img {
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-text {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 25px;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    color: white;
+
+    transform: translateY(100%);
+
+    transition: 0.3s;
+}
+
+.gallery-item:hover .gallery-text {
+    transform: translateY(0);
+}
+
+.gallery-container .gallery-item:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.gallery-container .gallery-item:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.gallery-container .gallery-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+/* KONTAKTU SADAĻA */
+
+.contact {
+    padding: 100px 10%;
+}
+
+
+.contact h2 {
+    font-size: 42px;
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+.contact-container {
+    display: flex;
+
+    gap: 80px;
+}
+
+
+.contact-info {
+    flex: 1;
+}
+
+
+.contact-info h3 {
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+
+.contact-info p {
+    margin-bottom: 15px;
+
+    color: var(--dark);
+}
+
+
+.contact-form {
+    flex: 1;
+}
+
+
+.contact-form h3 {
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+
+.contact-form form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+
+    font-family: Arial, sans-serif;
+}
+
+
+.contact-form textarea {
+    height: 150px;
+
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--wood);
+
+    color: white;
+
+    border: none;
+
+    padding: 16px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--dark);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--dark);
+
+    color: white;
+
+    padding: 50px 10%;
+}
+
+
+.footer-container {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.footer-logo {
+    font-size: 24px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.footer-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.footer-links a {
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.footer-links a:hover {
+    opacity: 0.6;
+}
+
+
+footer p {
+    font-size: 14px;
+
+    color: #aaa;
+}
+
+/* ATSAUKSMES */
+
+.testimonials {
+    padding: 100px 10%;
+
+    background-color: #f5f5f5;
+}
+
+
+.testimonials h2 {
+    font-size: 42px;
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+.testimonials-container {
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.testimonial {
+    flex: 1;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.stars {
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+
+.testimonial p {
+    line-height: 1.7;
+
+    color: #555;
+
+    margin-bottom: 25px;
+}
+
+
+.testimonial h3 {
+    font-size: 17px;
+}
+
+.reveal-scale {
+    opacity: 0;
+
+    transform: scale(0.9);
+
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+
+.reveal-scale.active {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+.testimonial:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.testimonial:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.testimonial:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+/* Telefona dizains */
+
+@media (max-width: 768px) {
+    nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 80px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 8%;
+
+    z-index: 2000;
+
+    background-color: white;
+
+    }
+
+    body {
+    padding-top: 80px;
+    }
+
+    .logo {
+    width: 120px;
+
+    text-align: center;
+
+    line-height: 1.2;
+    }
+
+    .menu-button {
+    display: block;
+
+    background: none;
+
+    border: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+    }
+
+    .menu {
+    display: flex;
+
+    position: fixed;
+
+    top: -100%;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    gap: 30px;
+
+    padding-right: 20%;
+
+    background-color: white;
+
+    transition: top 0.5s ease;
+
+    z-index: 1000;
+    }
+
+    .menu.active {
+    top: 0;
+    }
+
+    .menu-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(8px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.5s ease;
+
+    z-index: 999;
+
+    pointer-events: none;
+    }
+
+    .menu-overlay.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+    }
+
+    .close-button {
+    display: block;
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 150px;
+
+    background: none;
+
+    border: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    z-index: 2001;
+    }
+
+    /* HERO */
+
+    .hero {
+        height: 600px;
+
+        padding: 80px 0 10%;
+
+        text-align: center;
+
+        justify-content: center;
+
+        background-attachment: scroll;
+    }
+
+
+    .hero-content {
+        width: 100%;
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .hero p {
+        font-size: 17px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    /* PAKALPOJUMI */
+
+    .services-container {
+        flex-direction: column;
+    }
+
+
+    /* PAR MUMS */
+
+    .about-container {
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+
+    /* GALERIJA */
+
+    .gallery-container {
+        flex-direction: column;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        font-size: 35px;
+
+        padding: 10px;
+    }
+
+    .gallery-prev {
+        left: 5px;
+    }
+
+    .gallery-next {
+        right: 5px;
+    }
+    
+    /* ATSAUKSMES */
+
+    .testimonials-container {
+        flex-direction: column;
+    }
+
+
+    /* KONTAKTI */
+
+    .contact-container {
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.reveal.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+
+    transform: translateX(-50px);
+
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.reveal-right {
+    opacity: 0;
+
+    transform: translateX(50px);
+
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.reveal-left.active,
+.reveal-right.active {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+/* GALERIJAS LIELAIS SKATS */
+
+.gallery-item {
+    cursor: pointer;
+}
+
+.gallery-modal {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.85);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease;
+
+    z-index: 3000;
+}
+
+.gallery-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gallery-modal img {
+    max-width: 90%;
+    max-height: 85vh;
+
+    object-fit: contain;
+}
+
+.gallery-close {
+    position: absolute;
+
+    top: 30px;
+    right: 30px;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+}
+
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 50px;
+
+    cursor: pointer;
+
+    padding: 20px;
+
+    z-index: 3001;
+
+    transition: opacity 0.3s ease;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+    opacity: 0.6;
+}
+
+.gallery-prev {
+    left: 30px;
+}
+
+.gallery-next {
+    right: 30px;
+}
