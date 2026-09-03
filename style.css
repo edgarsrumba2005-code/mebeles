@@ -720,6 +720,10 @@ footer p {
     line-height: 1.2;
     }
 
+    .logo span {
+    display: block;
+    }
+    
     .menu-button {
     display: block;
 
